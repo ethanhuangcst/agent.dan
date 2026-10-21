@@ -8,7 +8,7 @@
 | --- | --- |
 | `hcp-engagement-agent/` | 智能体：HCP 个性化互动助手（agent 文件与需求规格 `req-spec.md`） |
 | `course-design-agent/` | 智能体/产品：SDD 与 agent 课程（`note.md`、`original.prompt.md`、已交付课程 `course-design-delivered/`） |
-| `sdd.works.ethan/` | 智能体：ethan 教练（`ethan.rocks.md`） |
+| `sdd.works.ethan/` | 智能体：ethan 教练（`ethan.md`） |
 | `specs/agent-design-patterns/` | 设计智能体的通用指南（ROCKS 编写范式、Gulli 21 模式选型、主题笔记），入口 `00-index.md` |
 | `spike/` | 跨智能体的探索笔记（如 QQ Doc、Google Drive CRUD 调研） |
 
