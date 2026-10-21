@@ -14,10 +14,12 @@ skill，不是 agent。问答引导必须发生在宿主对话循环里，subage
 | 同目录 `knowledge-index.md` | 知识清单：主题、kb 检索词、本地参考路径 |
 | 同目录 `agent-design-patterns.md` | 模式知识 sibling 参考副本：`00-06` 的蒸馏全文，随 skill 走 |
 | `~/.workbuddy/skills/ethan-agent-builder/` | WorkBuddy 侧入口 |
-| 仓库 `ethan-agent-builder/` | 需求与设计文档（本文件、`req-spec.md`）、教训暂存 `lessons.md` |
+| 仓库 `ethan-agent-builder/` | 需求与设计文档（本文件、`req-spec.md`）、skill 文件版本副本（`SKILL.md`、`knowledge-index.md`、`agent-design-patterns.md`）、教训暂存 `lessons.md` |
 | 仓库 `specs/agent-design-patterns/` | 知识源头 `00-06`，git 版本化 |
 
 两宿主共用一份实体：WorkBuddy 侧先用 symlink 指向 `~/.cursor/skills/ethan-agent-builder/`；WorkBuddy 不跟 symlink 时改为复制两份，以仓库为同步源。两个方案都可用时选 symlink。
+
+skill 文件以仓库为版本源：改动先落仓库 `ethan-agent-builder/`，再同步到 `~/.cursor/skills/ethan-agent-builder/`（WorkBuddy symlink 随之生效）；仓库副本与运行时副本不一致时以仓库为准。
 
 sibling 副本先例：pack 的 `sdd-build-agent` 自带 `agent-design-patterns.md` sibling，同一做法。
 
