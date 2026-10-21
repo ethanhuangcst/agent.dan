@@ -3,6 +3,7 @@
 来源：《Agentic Design Patterns》第 4、6、7 章。这三个模式让 agent 从"执行一次"升级为"规划、评估、协同"。
 
 来源：https://github.com/DanieleSalatti/AgenticDesignPatterns
+来源说明：各章配套 notebook 在该仓库 `notebooks/` 目录，按 `Chapter N_` 前缀分章；原书 PDF 在本目录 `Agentic_Design_Patterns.pdf`。
 
 ## Reflection（第 4 章）
 
@@ -31,4 +32,4 @@
 ## 组合要点
 
 - Reflection 的 critic agent 本身就是最小 multi-agent 结构；Planning 生成的步骤序列可交给 Multi-Agent 系统分工执行。
-- 三者共同的风险是"失控的自治"：生产环境应配对使用 Guardrails（见 04 笔记）与 Evaluation（见 05 笔记）。
+- 三者共同的风险是"失控的自治"：生产环境应配对使用 Guardrails（见 05 笔记）与 Evaluation（见 06 笔记）。

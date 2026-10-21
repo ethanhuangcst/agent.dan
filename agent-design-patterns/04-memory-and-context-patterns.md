@@ -3,6 +3,7 @@
 来源：《Agentic Design Patterns》第 8、9、11、14 章。这四个模式解决 agent 的"知道什么、记住什么、朝哪去"。
 
 来源：https://github.com/DanieleSalatti/AgenticDesignPatterns
+来源说明：各章配套 notebook 在该仓库 `notebooks/` 目录，按 `Chapter N_` 前缀分章；原书 PDF 在本目录 `Agentic_Design_Patterns.pdf`。
 
 ## Memory Management（第 8 章）
 

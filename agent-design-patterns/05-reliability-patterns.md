@@ -3,6 +3,7 @@
 来源：《Agentic Design Patterns》第 12、13、18 章。这三个模式决定 agent 能否上生产：出错能恢复、关键决策有人把关、输出有防护。
 
 来源：https://github.com/DanieleSalatti/AgenticDesignPatterns
+来源说明：各章配套 notebook 在该仓库 `notebooks/` 目录，按 `Chapter N_` 前缀分章；原书 PDF 在本目录 `Agentic_Design_Patterns.pdf`。
 
 ## Exception Handling and Recovery（第 12 章）
 

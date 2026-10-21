@@ -1,24 +1,25 @@
-# Agent building pattern
+# ROCKS: the agent authoring pattern
 
-Business learners who can fill a S.T.A.R. prompt card can fill one agent card for a repeated job. The card is the pattern. A multi-agent system waits until one worker cannot do the job.
+ROCKS is the paradigm for writing one agent's brief: Role, Outcome, Capability, Knowledge, and Stop. A person who can describe one repeated job can fill one card. The card is the pattern. A multi-agent system waits until one worker cannot do the job.
 
-The working name is **ROCKS**: Role, Outcome, Capability, Knowledge, and Stop. The name carries the rule: the worker stops before an act leaves the team. `course-design/ethan.rocks.md` uses the same name for the coach agent file, so one pattern keeps one name across the course.
+The name carries the rule: the worker stops before an act leaves the team. `course-design/ethan.rocks.md` uses the same name for the coach agent file, so one pattern keeps one name across the repo.
 
-## ROCKS next to STAR
+## Position: authoring paradigm, not runtime design paradigm
 
-STAR, from the course card, is Situation, Task, Action (role), and Rules. It builds one prompt. ROCKS builds the worker that can run that kind of prompt again.
+ROCKS says how to write the definition of one agent. It does not pick how agents, tools, and steps compose at run time. That composition is a design paradigm, catalogued in `agent-design-patterns/index.md`.
 
-| STAR block | ROCKS block | What changes |
+| | ROCKS (authoring) | Design paradigms (runtime) |
 | --- | --- | --- |
-| Situation | Role | The seat the worker holds, and facts that stay true for every run, not one email pasted once. |
-| Task | Outcome | One repeated job, one outcome, and how value is counted. |
-| Action (role) | Capability | The role matched to the job, plus the tools that role may use, each marked read, draft, or act. |
-| Rules | Stop | Format and tone, plus which steps draft and which steps wait for a person. |
-| (no STAR block) | Knowledge | New in ROCKS: the named knowledge the worker must use for the job. |
+| Question it answers | How is this one agent defined? | How do agents, tools, and steps compose for a task? |
+| Artifact | One agent brief, written once and versioned | An execution structure chosen per task or system |
+| Examples | Role, Outcome, Capability, Knowledge, Stop | Prompt chaining, routing, reflection, multi-agent |
+| Used when | The agent file is written or revised | The system is designed, or a task is routed |
+
+The two compose: a ROCKS brief defines the worker, and a design paradigm decides where that worker sits in a larger flow.
 
 ## The card
 
-Use the same shape as the STAR table: a short block, a question, a length, what to avoid, and what to do.
+Each block has a question, a length, what to avoid, and what to do.
 
 | Block | Ask | Length | Avoid | Do |
 | --- | --- | --- | --- | --- |
@@ -85,8 +86,8 @@ Checked 12 Oct 2026.
 
 | Claim | Kind | Source |
 | --- | --- | --- |
-| STAR blocks are Situation, Task, Action (role), and Rules, with length and avoid / do columns | User-provided | Course STAR card in the screenshot |
 | ROCKS is Role, Outcome, Capability, Knowledge, and Stop, and regroups the coach agent file | User-provided | `course-design/ethan.rocks.md` in this repo |
+| ROCKS structures how an agent file is written, while runtime patterns shape how a system executes | Inference | Repo usage: `course-design/ethan.rocks.md`, `specs/hcp-engagement-agent/req-spec.md` §2, `agent-design-patterns/index.md` |
 | A workflow fixes the path in advance. An agent lets the model choose tools and next steps. Start with the simplest option that meets the task. | Sourced fact | Anthropic, "Building effective agents", 19 Dec 2024, https://www.anthropic.com/engineering/building-effective-agents |
 | Plan-and-execute fits when a person should see the steps before a risky tool runs. Approval of a plan is not approval of every later tool call. | Sourced fact | systemprompt.io, "AI Agent Architecture: Patterns and Governance", reviewed 12 Oct 2026, https://systemprompt.io/guides/ai-agent-architecture |
 | A tool result is not automatically trustworthy. A production loop needs a stop: steps, time, or spend. | Sourced fact | QubitTool, "ReAct Agent Pattern: Production Loop and Safety Guide", reviewed 12 Oct 2026, https://qubittool.com/blog/react-framework-explained |

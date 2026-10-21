@@ -3,6 +3,7 @@
 来源：《Agentic Design Patterns》第 1、2、3、5 章。这四个模式解决同一个问题：把一次不可靠的大提示，拆成受控的执行结构。
 
 来源：https://github.com/DanieleSalatti/AgenticDesignPatterns
+来源说明：各章配套 notebook 在该仓库 `notebooks/` 目录，按 `Chapter N_` 前缀分章；原书 PDF 在本目录 `Agentic_Design_Patterns.pdf`。
 
 ## Prompt Chaining（第 1 章）
 

@@ -3,6 +3,7 @@
 来源：《Agentic Design Patterns》第 10、15、16、17、19、20、21 章。这组模式面向系统集成、成本控制与持续运营。
 
 来源：https://github.com/DanieleSalatti/AgenticDesignPatterns
+来源说明：各章配套 notebook 在该仓库 `notebooks/` 目录，按 `Chapter N_` 前缀分章；原书 PDF 在本目录 `Agentic_Design_Patterns.pdf`。
 
 ## Model Context Protocol / MCP（第 10 章）
 
@@ -63,4 +64,4 @@
 ## 组合要点
 
 - 生产系统的运维底线：Evaluation 持续度量 + Resource-Aware 控成本 + MCP/A2A 管集成边界。
-- 这组模式的共同前提是"系统已在运行"：设计期应优先落地 01-04 组的模式，再按运营压力逐步引入本组。
+- 这组模式的共同前提是"系统已在运行"：设计期应优先落地 02-05 组的模式，再按运营压力逐步引入本组。
