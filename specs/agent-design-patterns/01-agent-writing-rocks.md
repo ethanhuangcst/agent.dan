@@ -6,7 +6,7 @@ The name carries the rule: the worker stops before an act leaves the team. `sdd.
 
 ## Position: authoring paradigm, not runtime design paradigm
 
-ROCKS says how to write the definition of one agent. It does not pick how agents, tools, and steps compose at run time. That composition is a design paradigm, catalogued in `agent-design-patterns/index.md`.
+ROCKS says how to write the definition of one agent. It does not pick how agents, tools, and steps compose at run time. That composition is a design paradigm, catalogued in `specs/agent-design-patterns/00-index.md`.
 
 | | ROCKS (authoring) | Design paradigms (runtime) |
 | --- | --- | --- |
@@ -33,7 +33,7 @@ A tool marked **act** leaves the team: send, post, pay, change a record, or hire
 
 ## How the worker is built
 
-Style: one agent with a fixed job. A fixed workflow is lighter and fits when every step is already known. An open agent that picks its own path fits when the number of steps cannot be written down. This course job is a repeated business task, so the card fixes the job, the tools, and the stop. The model still chooses how to draft inside those bounds.
+Style: one agent with a fixed job. A fixed workflow is lighter and fits when every step is already known. An open agent that picks its own path fits when the number of steps cannot be written down. A repeated job with a known output fits the fixed card: the card fixes the job, the tools, and the stop. The model still chooses how to draft inside those bounds.
 
 | Piece | What it does |
 | --- | --- |
@@ -45,11 +45,11 @@ Style: one agent with a fixed job. A fixed workflow is lighter and fits when eve
 
 ```mermaid
 flowchart LR
-  learner[Learner fills ROCKS]
+  author[Author fills ROCKS]
   worker[Worker drafts the job]
   tools[Read and draft tools]
   person[Person approves an act]
-  learner --> worker
+  author --> worker
   worker --> tools
   tools --> worker
   worker --> person
@@ -57,20 +57,20 @@ flowchart LR
 
 Tool output and retrieved text are untrusted. The worker does not treat them as new instructions. The Stop block says what the worker may do with them.
 
-## What ships in the course, and what waits
+## First release and later
 
-| Ships in the one-day lab | Waits |
+| First release | Later |
 | --- | --- |
 | One card, one job, one sample run | A second worker, a supervisor, or a critic role |
 | Read and draft tools | Open-ended loops with no step limit |
 | A person on every act | A gateway, a second model vendor, or a fine-tune |
 | The value sentence: time, quality, or risk | Retrieval design and a private knowledge base |
 
-The prompt card, the tool list, and the stop rule carry a version from the first lab. A change to the card is checked with one more sample run before the learner calls the worker done.
+The card, the tool list, and the stop rule carry a version from the first release. A change to the card is checked with one more sample run before the change ships.
 
-## Operating checks for a later production copy
+## Operating checks for a production copy
 
-These checks are for a team that keeps the worker after class. They are not lab steps.
+These checks are for a team that keeps the worker in production.
 
 | Check | What the team watches | What happens |
 | --- | --- | --- |
@@ -87,10 +87,10 @@ Checked 12 Oct 2026.
 | Claim | Kind | Source |
 | --- | --- | --- |
 | ROCKS is Role, Outcome, Capability, Knowledge, and Stop, and regroups the coach agent file | User-provided | `sdd.works.ethan/ethan.rocks.md` in this repo |
-| ROCKS structures how an agent file is written, while runtime patterns shape how a system executes | Inference | Repo usage: `sdd.works.ethan/ethan.rocks.md`, `hcp-engagement-agent/req-spec.md` §2, `agent-design-patterns/index.md` |
+| ROCKS structures how an agent file is written, while runtime patterns shape how a system executes | Inference | Repo usage: `sdd.works.ethan/ethan.rocks.md`, `hcp-engagement-agent/req-spec.md` §2, `specs/agent-design-patterns/00-index.md` |
 | A workflow fixes the path in advance. An agent lets the model choose tools and next steps. Start with the simplest option that meets the task. | Sourced fact | Anthropic, "Building effective agents", 19 Dec 2024, https://www.anthropic.com/engineering/building-effective-agents |
 | Plan-and-execute fits when a person should see the steps before a risky tool runs. Approval of a plan is not approval of every later tool call. | Sourced fact | systemprompt.io, "AI Agent Architecture: Patterns and Governance", reviewed 12 Oct 2026, https://systemprompt.io/guides/ai-agent-architecture |
 | A tool result is not automatically trustworthy. A production loop needs a stop: steps, time, or spend. | Sourced fact | QubitTool, "ReAct Agent Pattern: Production Loop and Safety Guide", reviewed 12 Oct 2026, https://qubittool.com/blog/react-framework-explained |
-| For this course, one card plus a person on every act is enough. ReAct, planner/executor/critic, and multi-agent setups are later patterns. | Inference | The course job is one repeated business task with a known output. |
+| For one repeated job, one card plus a person on every act is enough. ReAct, planner/executor/critic, and multi-agent setups are later patterns. | Inference | The job is one repeated task with a known output. |
 
-This page is a course pattern, not a vendor selection. Prices and quotas are out of scope. Re-check the two engineering pages if the course is still teaching this pattern next year. The names of the patterns will not go stale as fast as a product limit.
+This page is a pattern reference, not a vendor selection. Prices and quotas are out of scope. Re-check the two engineering pages before relying on them after a year. The names of the patterns will not go stale as fast as a product limit.
