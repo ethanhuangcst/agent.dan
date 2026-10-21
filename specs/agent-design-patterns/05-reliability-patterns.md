@@ -34,6 +34,8 @@
 
 不适用条件（推断）：原型验证阶段失败即可整体重跑，重试与降级逻辑可后置；但上生产前必须补齐，书中把它列为可靠部署的必要条件。
 
+配套代码：[第 12 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2012_%20Exception%20Handling%20and%20Recovery%20%28Agent%20with%20Fallback%29)
+
 ## Human-in-the-Loop / HITL（第 13 章）
 
 ### 直觉
@@ -62,6 +64,8 @@
 
 不适用条件（推断）：书中明确指出两个代价。可扩展性不足：操作员管不了百万级任务，准确率与吞吐量是基本权衡，常需混合方法（自动化做规模，HITL 做准确）。依赖高技能专家：AI 能生成代码，但识别细微错误要熟练开发者。隐私：敏感信息暴露给人之前必须匿名化，多一层流程复杂性。
 
+配套代码：[第 13 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2013_%20Human-in-the-Loop%20%28Customer%20Support%20Agent%20with%20Personalization%20and%20Escalation%29)
+
 ## Guardrails/Safety Patterns（第 18 章）
 
 ### 直觉
@@ -87,6 +91,8 @@
 适用条件：agent 输出会影响用户、系统或企业声誉的一切场景，对外客服、内容生成平台、涉敏感信息的金融/医疗/法务系统。单一防护手段不足，多层组合才有鲁棒性，且需持续监控与迭代以应对新风险。
 
 不适用条件（推断）：离线内部实验且输出无外溢风险时可最小化，但对外暴露前必须补齐。
+
+配套代码：[第 18 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2018_%20Guardrails_Safety%20Patterns%20%28ADK%20validate%20tool%29)
 
 ## 组合要点
 

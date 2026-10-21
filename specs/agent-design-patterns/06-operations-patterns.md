@@ -34,6 +34,8 @@
 
 不适用条件（推断）：工具少而固定时直接 function calling 更简单，引入 MCP 只增加一层协议开销；API 数据格式对智能体不友好（如返回 PDF 而非文本）时，包 MCP 也没用，先改 API。
 
+配套代码：[第 10 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2010_%20Model%20Context%20Protocol%20%28ADK%20Agent%20Consuming%20FastMCP%20Server%29)
+
 ## Inter-Agent Communication / A2A（第 15 章）
 
 ### 直觉
@@ -63,6 +65,8 @@ LangGraph 建的客户端能调 CrewAI 建的 WeatherBot，靠的就是这张卡
 
 不适用条件（推断）：同一框架或同一进程内的 agent 协作，直接调用即可。
 
+配套代码：[第 15 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2015_%20Inter-Agent%20Communication%20%28A2A%20AgentCard%20for%20an%20Agent%20acting%20as%20a%20WeatherBot%29)
+
 ## Resource-Aware Optimization（第 16 章）
 
 ### 直觉
@@ -90,6 +94,8 @@ LangGraph 建的客户端能调 CrewAI 建的 WeatherBot，靠的就是这张卡
 适用条件：API 预算受限、延迟敏感、边缘设备部署、需在质量与成本间程序化权衡的场景。
 
 不适用条件（推断）：流量小或预算宽松时单一模型更简单。
+
+配套代码：[第 16 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2016_%20Resource-Aware%20Optimization%20%28OI%20and%20Google%20search%29)
 
 ## Reasoning Techniques（第 17 章）
 
@@ -119,6 +125,8 @@ LangGraph 建的客户端能调 CrewAI 建的 WeatherBot，靠的就是这张卡
 
 不适用条件（推断）：模式化简单问答，显式推理只增加延迟与 token 成本。
 
+配套代码：[第 17 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2017_%20Reasoning%20Techniques%20%28Executing%20code%29)
+
 ## Evaluation and Monitoring（第 19 章）
 
 ### 直觉
@@ -147,6 +155,8 @@ LangGraph 建的客户端能调 CrewAI 建的 WeatherBot，靠的就是这张卡
 
 不适用条件（推断）：尚无生产部署时无运行指标可采；但上线前应先定义好指标。
 
+配套代码：[第 19 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2019_%20Evaluation%20and%20Monitoring%20%28Basic%20Agent%20Response%20Evaluation%20%28Correctness_Relevance%29%29)
+
 ## Prioritization（第 20 章）
 
 ### 直觉
@@ -172,6 +182,8 @@ LangGraph 建的客户端能调 CrewAI 建的 WeatherBot，靠的就是这张卡
 适用条件：agent 需在冲突目标与有限资源下自主管理多个任务。
 
 不适用条件（推断）：同一时刻只有一个待办任务时排序无意义。
+
+配套代码：[第 20 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2020_%20Prioritization%20%28SuperSimplePM%29)
 
 ## Exploration and Discovery（第 21 章）
 
@@ -200,6 +212,8 @@ AI 协同科学家（Google Research，基于 Gemini）研究"为什么某些移
 适用条件：开放式、解空间未定义的领域：科学研究、市场分析、创意内容生成。
 
 不适用条件（推断）：目标明确的优化型任务不需要探索机制，探索的随机性反而降低效率。
+
+配套代码：[第 21 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2021_%20Chapter%2021_%20Exploration%20and%20Discovery%28Agent%20Laboratory%29)
 
 ## 组合要点
 

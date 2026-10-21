@@ -35,6 +35,8 @@
 
 书中要点：单提示词处理多约束任务有五种失效，每种的样子：指令被忽略（模型只做了总结，没提取数据）、上下文漂移（做到第三步忘了原始约束）、误差传播（第一步一个错数字走进后面每一步）、上下文窗口不足（报告太长塞不下）、幻觉放大（认知负荷一大，模型开始编造）。
 
+配套代码：[第 1 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%201_%20Prompt%20Chaining%20%28Code%20Example%29)
+
 ## Routing（第 2 章）
 
 ### 直觉
@@ -62,6 +64,8 @@
 适用条件：agent 必须在多个不同工作流之间做选择，如客服机器人区分销售、技术支持、账号管理三类请求。
 
 不适用条件（推断）：只有一条执行路径时无收益；分流维度少于两个时不值得引入路由开销；规则若能解决，不必用 LLM 判断。
+
+配套代码：[第 2 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%202_%20Routing%20%28Google%20ADK%20Code%20Example%29)
 
 ## Parallelization（第 3 章）
 
@@ -91,6 +95,8 @@
 
 不适用条件（推断）：任务有严格先后依赖时不可并行；书中明确指出并发会显著增加设计、调试和日志的复杂度与成本，低流量简单任务不值得付这个代价。
 
+配套代码：[第 3 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%203_%20Parallelization%20%28Google%20ADK%20Code%20Example%29.ipynb)
+
 ## Tool Use / Function Calling（第 5 章）
 
 ### 直觉
@@ -119,6 +125,8 @@
 适用条件：任何需要超越文本生成的场景，查实时数据、查数据库、发邮件、执行代码、控制设备。
 
 不适用条件（推断）：纯文本生成任务；工具数量激增时模型选错工具的比率上升，需要配合 Routing 收敛候选集。
+
+配套代码：[第 5 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%205_%20Tool%20Use%20%28CrewAI%20Function%20Calling%20Example%29)
 
 ## 组合要点
 

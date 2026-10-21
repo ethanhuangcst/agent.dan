@@ -33,6 +33,8 @@
 
 不适用条件（推断）：单轮无状态交互不需要；状态写入遵循框架约定（如 ADK 的 state_delta），直接改状态字典是常见错误。
 
+配套代码：[第 8 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%208_%20Memory%20Management%20-%20Code%20Example%20%28ADK%20Conceptual%20Example_%20Explicit%20State%20Update%20via%20EventActions%29)
+
 ## Learning and Adaptation（第 9 章）
 
 ### 直觉
@@ -58,6 +60,8 @@
 适用条件：环境动态变化、需要持续改进的场景，如个性化助手、交易机器人、欺诈检测。
 
 不适用条件（推断）：做应用层 agent 时只需吸收"基于经验反馈调整行为"的思想，不必引入训练管线。
+
+配套代码：[第 9 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%209_%20Adaptation%20-%20Code%20Example%20%28OpenEvolve%29)
 
 ## Goal Setting and Monitoring（第 11 章）
 
@@ -87,6 +91,8 @@
 
 不适用条件（推断）：有人类逐步确认的流程不需要自主目标追踪；目标定义含糊时监控闭环没有意义，先写清指标再谈自主。
 
+配套代码：[第 11 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2011_%20Goal%20Setting%20and%20Monitoring%20%28Goal_Setting_Iteration%29.ipynb)
+
 ## Knowledge Retrieval / RAG（第 14 章）
 
 ### 直觉
@@ -114,6 +120,8 @@
 适用条件：回答需基于最新、私有或领域专属知识，如企业内部文档问答、客服机器人、需要引用来源的场景。
 
 不适用条件（推断）：任务与私有知识无关时检索层只增加延迟；检索质量差会直接污染回答，需配 Evaluation 度量命中率。GraphRAG 用知识图谱处理多源关系推理，代价是构建与维护图谱的成本高。
+
+配套代码：[第 14 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%2014_%20Knowledge%20Retrieval%20%28RAG%20%20LangChain%29)
 
 ## 组合要点
 

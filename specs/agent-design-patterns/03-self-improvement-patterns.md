@@ -32,6 +32,8 @@
 
 不适用条件（推断）：无明确评价标准时自我评估会空转；一次性低成本任务不值得多轮循环。
 
+配套代码：[第 4 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%204_%20Reflection%20%28ADK%20Code%20Example%29)
+
 ## Planning（第 6 章）
 
 ### 直觉
@@ -59,6 +61,8 @@
 适用条件：请求复杂到单动作或单工具无法完成，如自动生成研究报告、新员工入职流程、竞品分析。LLM 凭训练数据能生成可行计划，Google DeepResearch 是迭代式研究计划的代表实现。
 
 不适用条件（推断）：单步可完成的任务，规划只增加开销；计划质量依赖模型能力，弱模型生成的步骤序列需人工校验后再执行。
+
+配套代码：[第 6 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%206_%20Planning%20-%20Code%20Example)
 
 ## Multi-Agent Collaboration（第 7 章）
 
@@ -88,6 +92,8 @@
 适用条件：任务对单一 agent 过于复杂、可拆成需要不同专长的子任务，如复杂研究分析、软件开发、创意内容生产。
 
 不适用条件（推断）：任务单角色可完成时，多 agent 放大协调成本与误差传播；书中坦诚指出当前多 agent 系统的成效受限于底层 LLM 的推理能力，集体学习能力仍在早期。
+
+配套代码：[第 7 章 notebook](https://github.com/DanieleSalatti/AgenticDesignPatterns/blob/main/notebooks/Chapter%207_%20Multi-Agent%20Collaboration%20-%20Code%20Example%20%28ADK%20%2B%20Gemini%20AgentTooll%29.ipynb)
 
 ## 组合要点
 
