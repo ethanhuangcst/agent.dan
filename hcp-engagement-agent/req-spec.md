@@ -6,6 +6,7 @@
 > 评估确认（2026-10-20）：MCP 暴露面收敛为数据面，决策面只走 Web App。见 §1 部署形态与 §4 MCP 暴露面。
 > 评估确认二（2026-10-20）：`retrieve_academic` / `retrieve_compliance` 转为 `hcp-engagement-mcp` 对外工具（只读，`retrieve_compliance` 附租户与引用标注条件）；源设计中的决策面工具移除，采纳方案 A，源仓库另行修订。见 §4。
 > 修正二（2026-10-20，用户提出）：本地形态不调服务器决策面；一人一策与合规预审由本地 agent 基于数据面工具（HCP 信息、洞察、学术、合规知识）本地生成与判定，方案含双引用并恒标 `mlr_status=draft_not_reviewed`。见 §2 本地形态边界。
+> 修正三（2026-10-21，用户提出）：无服务器洞察时本地 agent 合成洞察草稿，恒标「本地合成草稿」、不写回、不冒充服务器 `doing_now`；§4 `get_hcp_insights` 行的理由措辞同步修订。见 §4。
 > 本文件是上述文档的需求总结，供本仓库参考；权威功能表以 `agent/agent-function-spec.md`（F-AGT-001–030、I-AGT-001–010）为准。
 
 ## 1. 产品定位与部署形态
@@ -93,7 +94,7 @@ get_twin_insights → retrieve_academic ‖ retrieve_compliance
 | --- | --- | --- |
 | `list_hcp` / `query_hcp` | 保留 | 只读事实，无冲突 |
 | `add_hcp` | 保留，属 act | 写 HCP 记录；本地 agent 调用前停下让人确认 |
-| `get_hcp_insights` | 只读暴露（不带 `refresh` 写入） | 单一事实源：本地引用服务器 `doing_now`，不自行合成；残留风险限于一致性，可用本地 agent 文件 Stop 块约束 |
+| `get_hcp_insights` | 只读暴露（不带 `refresh` 写入） | 单一事实源：有服务器 `doing_now` 时本地原样引用，不自行改写；无服务器洞察时本地合成草稿，恒标本地草稿、不写回、不冒充服务器结果（修正三）；残留风险限于一致性，可用本地 agent 文件 Stop 块约束 |
 | `retrieve_academic` | 只读暴露 | 无写副作用；出参带 citation；检索时不出站（dense 为进程内小模型，不调 LLM、不访问公开源） |
 | `retrieve_compliance` | 只读暴露，附两个条件 | 条件一：`tenant_id` 只来自服务端鉴权上下文，禁止作工具入参；无租户绑定时只返回全局种子，租户 SOP 仅在有租户鉴权时可见。条件二：工具 description 写明返回是条款引用（`clause_id` / `authority` / `version`），不是预审判定，不替代 `precheck` 与正式 MLR |
 | `propose_engagement_options` | 不暴露 | 服务器侧写入缺 session/tenant 溯源；`productContext` 可被本地伪造注入，生成可能超出说明书标签范围。一人一策由本地 agent 在本地生成（修正二），不经服务器写入 |
