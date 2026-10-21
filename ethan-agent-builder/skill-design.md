@@ -92,7 +92,7 @@ index 三列：主题、kb 检索词、本地参考路径。本地参考列指�
 4. 触发词：description 含中文短语（"帮我写一个 agent""引导我建一个智能体"）与英文短语，第三人称，两宿主通用。
 5. 分工声明：description 点名 `sdd-build-agent` 管 framework pack 内建 agent，本 skill 管个人跨宿主增强版，互不抢。
 6. 教训条目粒度：一次引导一条，含模式选择、理由、用户特有偏好，带核对日期。
-7. skill 正文语言：英文骨架加中文触发词，与现有 skill 生态一致；中文正文是备选，两者都可用时选英文骨架。
+7. skill 正文语言：中文正文（用户 2026-10-21 定稿），`SKILL.md` 与配套文件骨架均用中文；frontmatter 的 `name` 保持小写字母、数字、连字符，description 中文为主，保留 agent、ROCKS、kb、Cursor、WorkBuddy、sdd-build-agent 等英文专名作触发词。
 8. 改版回归：固定 2-3 个测试 prompt（如"给发票异常处理岗写一个跑在 WorkBuddy 的 agent"）人工走一遍工序再定稿。
 9. sibling 副本同步：仓库 `00-06` 改版后，同步刷新 sibling 副本并重导 kb，三处一致以仓库为准。
 

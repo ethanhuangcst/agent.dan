@@ -1,6 +1,6 @@
-# Knowledge index
+# 知识索引
 
-One row per topic. `kb 检索词` is the exact kb entry title in kb project `agent-design-patterns` (search with `kb_internal_search`). `本地参考` is the section in `agent-design-patterns.md` in this skill directory; the sibling file needs no kb and no repo workspace. This index repeats no pattern content; the content lives in the sibling file and the repo source `specs/agent-design-patterns/00-06` (editing source, agent.dan).
+一行一主题。「kb 检索词」列是 kb 项目 `agent-design-patterns` 里条目的确切标题，用 `kb_internal_search` 检索。「本地参考」列是本技能同目录 `agent-design-patterns.md` 里的节；sibling 文件不依赖 kb，也不依赖仓库 workspace。本索引不复述模式内容；内容单源在 sibling 文件，编辑源在 agent.dan 仓库 `specs/agent-design-patterns/00-06`。
 
 | 主题 | kb 检索词 | 本地参考 |
 | --- | --- | --- |
