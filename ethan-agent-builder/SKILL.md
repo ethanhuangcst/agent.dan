@@ -37,7 +37,7 @@ description: >-
 ## 选模式
 
 - 先读 [agent-design-patterns.md](./agent-design-patterns.md)：按任务特征匹配模式，再用不适用条件排除。
-- kb MCP 可达时同时检索教训：对项目 `agent-design-patterns` 调 `kb_internal_search`。主题到检索词的对照见 [knowledge-index.md](./knowledge-index.md)。
+- kb MCP 可达时同时检索教训：对项目 `agent-design-patterns` 调 `kb_internal_search`，检索词用 [agent-design-patterns.md](./agent-design-patterns.md) 顶部「kb 检索词对照表」的条目标题。
 - kb 读一次失败即降级读 sibling 文件，工序不变，回复注明本次走了本地副本；不重试第二次。
 - 提名 1-2 个模式并给理由，附近似备选的排除理由。只提名 sibling 文件或 kb 里出现的模式，不发明模式。
 

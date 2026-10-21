@@ -4,6 +4,36 @@
 
 原书：《Agentic Design Patterns: A Hands-On Guide to Building Intelligent Systems》（Antonio Gulli）。配套代码：GitHub `DanieleSalatti/AgenticDesignPatterns` 仓库 `notebooks/` 目录，按 `Chapter N_` 前缀分章；原书 PDF 在 agent.dan 仓库 `specs/agent-design-patterns/` 目录。
 
+## kb 检索词对照表
+
+kb 可达时用 `kb_internal_search` 检索项目 `agent-design-patterns`；「kb 检索词」列是条目确切标题。kb 不可达时只读本副本，工序不变。本表与 kb 重导同步刷新：仓库 `00-06` 改版、刷新本副本、重导 kb 时一并更新。
+
+| 模式节 | kb 检索词 |
+| --- | --- |
+| 选型索引 → 选型表 | Agent 设计模式选型索引（21 模式选型表） |
+| ROCKS：agent 编写范式 | ROCKS（agent 编写范式） |
+| 编排类 → Prompt Chaining（第 1 章） | Prompt Chaining（提示词链，第 1 章） |
+| 编排类 → Routing（第 2 章） | Routing（路由，第 2 章） |
+| 编排类 → Parallelization（第 3 章） | Parallelization（并行化，第 3 章） |
+| 编排类 → Tool Use / Function Calling（第 5 章） | Tool Use / Function Calling（工具使用，第 5 章） |
+| 自我改进类 → Reflection（第 4 章） | Reflection（反思，第 4 章） |
+| 自我改进类 → Planning（第 6 章） | Planning（规划，第 6 章） |
+| 自我改进类 → Multi-Agent Collaboration（第 7 章） | Multi-Agent Collaboration（多智能体协作，第 7 章） |
+| 记忆与上下文类 → Memory Management（第 8 章） | Memory Management（记忆管理，第 8 章） |
+| 记忆与上下文类 → Learning and Adaptation（第 9 章） | Learning and Adaptation（学习与适应，第 9 章） |
+| 记忆与上下文类 → Goal Setting and Monitoring（第 11 章） | Goal Setting and Monitoring（目标设定与监控，第 11 章） |
+| 记忆与上下文类 → Knowledge Retrieval / RAG（第 14 章） | RAG（检索增强生成） |
+| 可靠性类 → Exception Handling and Recovery（第 12 章） | Exception Handling and Recovery（异常处理与恢复，第 12 章） |
+| 可靠性类 → Human-in-the-Loop / HITL（第 13 章） | Human-in-the-Loop / HITL（人在环路，第 13 章） |
+| 可靠性类 → Guardrails/Safety Patterns（第 18 章） | Guardrails/Safety |
+| 运维与规模化类 → Model Context Protocol / MCP（第 10 章） | Model Context Protocol / MCP（模型上下文协议，第 10 章） |
+| 运维与规模化类 → Inter-Agent Communication / A2A（第 15 章） | Inter-Agent Communication / A2A（智能体间通信，第 15 章） |
+| 运维与规模化类 → Resource-Aware Optimization（第 16 章） | Resource-Aware Optimization（资源感知优化，第 16 章） |
+| 运维与规模化类 → Reasoning Techniques（第 17 章） | Reasoning Techniques / CoT、ReAct（推理技术，第 17 章） |
+| 运维与规模化类 → Evaluation and Monitoring（第 19 章） | Evaluation and Monitoring（评估与监控，第 19 章） |
+| 运维与规模化类 → Prioritization（第 20 章） | Prioritization（优先级排序，第 20 章） |
+| 运维与规模化类 → Exploration and Discovery（第 21 章） | Exploration and Discovery（探索与发现，第 21 章） |
+
 ---
 
 

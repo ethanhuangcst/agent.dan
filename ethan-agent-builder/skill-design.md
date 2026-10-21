@@ -11,10 +11,9 @@ skill，不是 agent。问答引导必须发生在宿主对话循环里，subage
 | 位置 | 内容 |
 | --- | --- |
 | `~/.cursor/skills/ethan-agent-builder/SKILL.md` | skill 本体：Capabilities、Knowledge、Limits、Anti-patterns |
-| 同目录 `knowledge-index.md` | 知识清单：主题、kb 检索词、本地参考路径 |
-| 同目录 `agent-design-patterns.md` | 模式知识 sibling 参考副本：`00-06` 的蒸馏全文，随 skill 走 |
+| 同目录 `agent-design-patterns.md` | 模式知识 sibling 参考副本：`00-06` 的蒸馏全文，顶部带 kb 检索词对照表，随 skill 走 |
 | `~/.workbuddy/skills/ethan-agent-builder/` | WorkBuddy 侧入口 |
-| 仓库 `ethan-agent-builder/` | 需求与设计文档（本文件、`req-spec.md`）、skill 文件版本副本（`SKILL.md`、`knowledge-index.md`、`agent-design-patterns.md`）、教训暂存 `lessons.md` |
+| 仓库 `ethan-agent-builder/` | 需求与设计文档（本文件、`req-spec.md`）、skill 文件版本副本（`SKILL.md`、`agent-design-patterns.md`）、教训暂存 `lessons.md` |
 | 仓库 `specs/agent-design-patterns/` | 知识源头 `00-06`，git 版本化 |
 
 两宿主共用一份实体：WorkBuddy 侧先用 symlink 指向 `~/.cursor/skills/ethan-agent-builder/`；WorkBuddy 不跟 symlink 时改为复制两份，以仓库为同步源。两个方案都可用时选 symlink。
@@ -65,18 +64,20 @@ sibling 副本先例：pack 的 `sdd-build-agent` 自带 `agent-design-patterns.
 
 ### 导入路径
 
-`kb_import_documents` 一次 23 项（逐项 propose，不自动入库），`kb_confirm_import_batch` 由用户逐项确认。仓库 `00-06` 改版后重导，重导前同步刷新 sibling 副本。
+`kb_import_documents` 一次 23 项（逐项 propose，不自动入库），`kb_confirm_import_batch` 由用户逐项确认。仓库 `00-06` 改版后重导，重导前同步刷新 sibling 副本与顶部 kb 检索词对照表。
 
 ### kb 在 WorkBuddy 侧的接入
 
 kb 未配置于 `~/.workbuddy/mcp.json`。接入动作：往该文件添加 kb 条目，改前征得用户确认。接入前，WorkBuddy 会话走 sibling 路径，完整可用。
 
-## knowledge-index 设计
+## kb 检索词对照表设计
 
-index 三列：主题、kb 检索词、本地参考路径。本地参考列指向 skill 同目录 sibling 文件，不指向仓库路径（WorkBuddy 会话的 workspace 未必有本仓库）。index 不复述知识内容，内容单源在仓库 `00-06`。
+对照表两列：模式节、kb 检索词，内嵌 sibling 副本顶部，不单设 index 文件（用户 2026-10-21 确认合并）。
 
-- skill 的 Knowledge 表引用 index，一层深。
-- kb 可用的宿主按主题查 kb 教训；不可用的宿主只读 sibling。
+- 合并依据：原索引的主题列与 sibling 内选型表的任务特征列重复；工序必读 sibling 全文，单独索引文件省不掉读取；`SKILL.md` 少一条引用、少一份维护。
+- 对照表是手工映射：kb 标题经 KM 归一化（如「RAG（检索增强生成）」「Guardrails/Safety」），不能从仓库标题机械生成；刷新 sibling 副本的拼接装配必须保留本表。
+- 维护与 kb 重导同一事件：仓库 `00-06` 改版、刷新 sibling 副本、重导 kb 时一并更新本表。
+- kb 可用的宿主按模式节查 kb 教训；不可用的宿主只读 sibling。
 
 ## kb 不可达的降级
 
@@ -94,7 +95,7 @@ index 三列：主题、kb 检索词、本地参考路径。本地参考列指�
 6. 教训条目粒度：一次引导一条，含模式选择、理由、用户特有偏好，带核对日期。
 7. skill 正文语言：中文正文（用户 2026-10-21 定稿），`SKILL.md` 与配套文件骨架均用中文；frontmatter 的 `name` 保持小写字母、数字、连字符，description 中文为主，保留 agent、ROCKS、kb、Cursor、WorkBuddy、sdd-build-agent 等英文专名作触发词。
 8. 改版回归：固定 2-3 个测试 prompt（如"给发票异常处理岗写一个跑在 WorkBuddy 的 agent"）人工走一遍工序再定稿。
-9. sibling 副本同步：仓库 `00-06` 改版后，同步刷新 sibling 副本并重导 kb，三处一致以仓库为准。
+9. sibling 副本同步：仓库 `00-06` 改版后，同步刷新 sibling 副本（含顶部 kb 检索词对照表）并重导 kb，三处一致以仓库为准。
 
 ## Limits（skill 本体）
 
