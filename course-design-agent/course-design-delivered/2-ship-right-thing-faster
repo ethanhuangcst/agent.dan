@@ -1,0 +1,170 @@
+# Course title
+Ship the Right Thing Faster with SDD: Product Development in the AI Era
+
+SDD - AI 时代产品开发新方法：更快交付正确的产品
+
+## Target audience
+
+- Business transformation leaders
+- Digital transformation leads
+- Product owners and product managers
+- Business analysts and subject matter experts
+
+
+- 业务转型负责人
+- 数字化转型负责人
+- 产品负责人和产品经理
+- 业务分析师和领域专家
+
+## Learning objectives (summary)
+
+- Explain SDD, agentic programming, and harness engineering to describe how they support product delivery.
+- Distinguish the four SDD foundations and key AI concepts to identify their roles in product development.
+- Design an SDD workspace to organize specifications and product development assets.
+- Develop a simple application with skills to meet defined acceptance criteria.
+- Organize project knowledge with skills and rules to support consistent reuse.
+- Evaluate workflow approaches to recommend one that fits the team's needs.
+
+
+- 解释规范驱动开发、智能体编程和 Harness Engineering（智能体运行机制与约束设计），说明三者如何协同支持产品交付。
+- 区分 SDD 的四项核心要素及关键 AI 概念，明确它们在产品开发中的作用。
+- 设计 SDD 工作区，有序管理规范文档和产品开发资料。
+- 使用技能构建简单应用，使其满足明确的验收标准。
+- 通过技能和规则整理项目知识，确保知识能够被一致地复用。
+- 评估不同的工作流方案，推荐符合团队需求的方案。
+
+## Learning objectives
+
+- Define Spec-Driven Development (SDD) to describe how written specifications guide implementation and acceptance.
+- Explain the relationship between SDD, agentic programming, and harness engineering to clarify how specifications, AI execution, and controls work together.
+- Explain the four SDD foundations—skills, rules, knowledge, and workflow—to identify the role of each in product development.
+- Differentiate agents, Model Context Protocol (MCP), retrieval-augmented generation (RAG), and applications to identify their roles in a product solution.
+- Design a workspace structure for specifications and product development assets to keep requirements, designs, tests, and project knowledge organized.
+- Develop a simple application using skills across acceptance-test-driven development (ATDD), UI design and mock-ups, technical design, implementation, and testing to meet defined acceptance criteria.
+- Organize project knowledge using skills and rules to make it retrievable and reusable across sessions.
+- Evaluate human-directed and agent-directed workflows to recommend an approach suited to the team's review capacity, risks, and skills.
+
+
+- 定义规范驱动开发（SDD），说明书面规范如何指导开发与验收。
+- 解释 SDD、智能体编程和 Harness Engineering 之间的关系，说明规范、AI 执行与约束机制如何协同运作。
+- 解释 SDD 的四项核心要素——技能、规则、知识和工作流，明确各自在产品开发中的作用。
+- 区分智能体、模型上下文协议（MCP）、检索增强生成（RAG）和应用程序，明确它们在产品方案中的作用。
+- 设计规范文档和产品开发资料的工作区结构，有序管理需求、设计、测试和项目知识。
+- 使用技能完成验收测试驱动开发（ATDD）、界面设计与原型制作、技术设计、编码实现和测试，构建符合验收标准的简单应用。
+- 使用技能和规则整理项目知识，使其能够在不同会话中被检索和复用。
+- 评估由人工安排步骤和由智能体选择步骤的工作流，根据团队的审核能力、风险和技能水平推荐合适的方案。
+
+
+<!-->
+
+
+
+## Learning objectives
+
+Bloom's taxonomy is a scale from recall to creation. Each line names the verb, the work, and the evidence in the room.
+
+| ID | After this day, the learner will be able to | Bloom | Evidence in the room |
+| --- | --- | --- | --- |
+| LO1 | Define SDD as building from a written spec that an agent and a person can both check | Remember | A definition in the learner's words, plus one example of a spec line that is checkable |
+| LO2 | Explain how SDD, agentic programming, and harness engineering depend on each other | Understand | A three-part map: the spec, the agent that acts, and the harness that constrains the act |
+| LO3 | List the four cores (skills, rules, knowledge, workflow) and state the job of each | Remember | A four-row card filled for the class product |
+| LO4 | Define agent, MCP (Model Context Protocol), RAG (retrieval-augmented generation), and application, and tell them apart on one product story | Understand | Four definitions and one sentence that says which box a given request belongs in |
+| LO5 | Design a workspace that holds specs and the product-building bundle | Create | A folder map with the spec, the UI note, the technical note, the test note, and the knowledge note |
+| LO6 | Use skills to build one simple application from spec through ATDD (acceptance-test-driven development), UI mock-up, technical design, testing, and implementation | Apply | A runnable slice whose behavior matches the acceptance checks |
+| LO7 | Use a skill and a rule to file one knowledge note the next session can find | Apply | The note is in the workspace, and a second prompt retrieves it without the learner pasting it again |
+| LO8 | Compare two ways to encode a workflow and recommend one for a stated team constraint | Evaluate | A written recommendation: the pattern, the constraint, and the reason |
+
+## How the day is shaped
+
+Contact time is about six hours, excluding lunch and short breaks. Module 5 is the long lab. If the day runs short, shorten Module 6 before cutting the lab.
+
+| Module | Minutes | Learning objectives |
+| --- | --- | --- |
+| 1. What SDD is, and what sits beside it | 50 | LO1, LO2 |
+| 2. The four cores | 40 | LO3 |
+| 3. Agent, MCP, RAG, and application | 45 | LO4 |
+| 4. The workspace and the bundle | 40 | LO5 |
+| 5. One slice, end to end, with skills | 150 | LO6 |
+| 6. Knowledge, rules, and a workflow choice | 55 | LO7, LO8 |
+
+## Class product
+
+The room builds one shared kind of slice: a small web page that records a single business request and shows a pass or fail against two acceptance checks. Each learner uses their own topic (a refund request, a campaign intake, a supplier exception) with the same page shape. The facilitator supplies framework.sdd.works Lite skills and rules. Learners run those skills. They do not author a new skill on this day.
+
+## Module 1. What SDD is, and what sits beside it
+
+- Time: 50 minutes
+- Course objectives: LO1, LO2
+- SDD means the spec is the source the agent and the person both use to judge the work.
+- Agentic programming means an agent takes steps toward that spec, including edits and tool calls.
+- Harness engineering means the skills, rules, checks, and approvals that keep those steps inside the spec.
+- Learners write a definition of SDD, then mark one line in a sample spec as checkable or not checkable.
+- They draw the three-part map on one page: spec, agent, harness.
+- They label one failure they have seen: a missing spec, an unbounded agent, or a missing check.
+
+## Module 2. The four cores
+
+- Time: 40 minutes
+- Course objective: LO3
+- Skills are repeatable jobs the agent can run.
+- Rules are constraints that stay on for every job.
+- Knowledge is the project facts the agent must use and must not invent.
+- Workflow is the order of jobs, including who approves a step.
+- Learners fill a four-row card for the class product. Each row names one example they will touch later in the day.
+
+## Module 3. Agent, MCP, RAG, and application
+
+- Time: 45 minutes
+- Course objective: LO4
+- An agent decides and acts inside a job.
+- An MCP server exposes tools and data to that agent through a standard connection.
+- A RAG flow retrieves passages from a known set and answers from those passages.
+- An application is the product a person uses. It may call an agent, an MCP server, or neither.
+- The facilitator gives six short requests. Learners sort each request into one box and say why.
+- The close is four definitions in the learner's words, tied to the class product: the app is the page, the agent runs the skills, MCP is named as the later way to attach a tool, and RAG is named as out of scope for this day.
+
+## Module 4. The workspace and the bundle
+
+- Time: 40 minutes
+- Course objective: LO5
+- The bundle is the set of files that carry the product: spec, UI mock note, technical note, test note, and a knowledge note.
+- Learners sketch the folder map on paper, then create that map in the prepared workspace.
+- They place a stub in each file so Module 5 fills files instead of inventing locations.
+- The map is done when a partner can point to the file that answers "what must the slice do?" and "how will we know?"
+
+## Module 5. One slice, end to end, with skills
+
+- Time: 150 minutes
+- Course objective: LO6
+- The facilitator runs a timed path. Learners stay on the path. Each step has a file and a skill.
+
+1. Spec: two acceptance checks in the spec file, written so a person can pass or fail them without asking the author.
+2. ATDD: turn those checks into the test note before any UI work.
+3. UI: a mock of the one screen, with the fields the checks name.
+4. Technical design: a short note of the page, the data, and what is out of scope.
+5. Test: run the checks and record pass or fail.
+6. Implementation: use the Lite skill to build the page until both checks pass.
+
+- The facilitator pauses after the spec and after the first failing test. Those two pauses are the teaching points.
+- The module is complete when the slice runs and both checks pass, or when one check fails and the learner can point to the spec line it violates.
+
+## Module 6. Knowledge, rules, and a workflow choice
+
+- Time: 55 minutes
+- Course objectives: LO7, LO8
+- Learners add one knowledge note the product needs (a term, a policy limit, or a source of truth).
+- They attach a rule: the agent uses that note and does not invent a second definition.
+- They ask for the term in a fresh prompt and show that the answer comes from the note.
+- They then compare two workflow patterns for "spec, then test, then build":
+  - A fixed skill sequence a person starts one step at a time
+  - An agent that may choose the next step inside the same rules
+- Each learner writes a recommendation for their real team: the pattern, one constraint (review load, risk, or skill of the team), and the reason.
+- Pairs read the recommendation aloud in one minute. The room does not need one shared answer.
+
+## What the facilitator prepares
+
+- Laptops with the Lite skills and rules installed
+- The class-product starter workspace and the folder map
+- The six sorting cards for Module 3
+- A completed sample slice learners can open if they stall after the first failing test
+- A clock for the two pauses in Module 5

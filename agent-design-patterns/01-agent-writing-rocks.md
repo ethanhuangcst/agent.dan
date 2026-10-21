@@ -2,7 +2,7 @@
 
 ROCKS is the paradigm for writing one agent's brief: Role, Outcome, Capability, Knowledge, and Stop. A person who can describe one repeated job can fill one card. The card is the pattern. A multi-agent system waits until one worker cannot do the job.
 
-The name carries the rule: the worker stops before an act leaves the team. `course-design/ethan.rocks.md` uses the same name for the coach agent file, so one pattern keeps one name across the repo.
+The name carries the rule: the worker stops before an act leaves the team. `sdd.works.ethan/ethan.rocks.md` uses the same name for the coach agent file, so one pattern keeps one name across the repo.
 
 ## Position: authoring paradigm, not runtime design paradigm
 
@@ -86,8 +86,8 @@ Checked 12 Oct 2026.
 
 | Claim | Kind | Source |
 | --- | --- | --- |
-| ROCKS is Role, Outcome, Capability, Knowledge, and Stop, and regroups the coach agent file | User-provided | `course-design/ethan.rocks.md` in this repo |
-| ROCKS structures how an agent file is written, while runtime patterns shape how a system executes | Inference | Repo usage: `course-design/ethan.rocks.md`, `specs/hcp-engagement-agent/req-spec.md` §2, `agent-design-patterns/index.md` |
+| ROCKS is Role, Outcome, Capability, Knowledge, and Stop, and regroups the coach agent file | User-provided | `sdd.works.ethan/ethan.rocks.md` in this repo |
+| ROCKS structures how an agent file is written, while runtime patterns shape how a system executes | Inference | Repo usage: `sdd.works.ethan/ethan.rocks.md`, `hcp-engagement-agent/req-spec.md` §2, `agent-design-patterns/index.md` |
 | A workflow fixes the path in advance. An agent lets the model choose tools and next steps. Start with the simplest option that meets the task. | Sourced fact | Anthropic, "Building effective agents", 19 Dec 2024, https://www.anthropic.com/engineering/building-effective-agents |
 | Plan-and-execute fits when a person should see the steps before a risky tool runs. Approval of a plan is not approval of every later tool call. | Sourced fact | systemprompt.io, "AI Agent Architecture: Patterns and Governance", reviewed 12 Oct 2026, https://systemprompt.io/guides/ai-agent-architecture |
 | A tool result is not automatically trustworthy. A production loop needs a stop: steps, time, or spend. | Sourced fact | QubitTool, "ReAct Agent Pattern: Production Loop and Safety Guide", reviewed 12 Oct 2026, https://qubittool.com/blog/react-framework-explained |
